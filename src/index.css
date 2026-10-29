@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* ============================================
+   VaaniAuth Design System (Google-Inspired)
+   ============================================ */
+
+@theme {
+  --color-google-blue: #1a73e8;
+  --color-google-red: #ea4335;
+  --color-google-yellow: #fbbc05;
+  --color-google-green: #34a853;
+  --color-google-blue-hover: #1765cc;
+
+  --color-vaani-bg: #0a0a1a;
+  --color-vaani-surface: #0f0f2a;
+  --color-vaani-card: #141432;
+  --color-vaani-border: rgba(255,255,255,0.08);
+  --color-vaani-border-hover: rgba(255,255,255,0.15);
+  --color-vaani-muted: #94a3b8;
+  --color-vaani-muted-dark: #64748b;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-vaani-bg);
+  color: #f1f3f4;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.google-blue-text {
+  color: #8ab4f8; /* Softer blue for dark theme */
+}
+
+.google-blue-bg {
+  background-color: #1a73e8;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.headline-large {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes soundwave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.animate-soundwave {
+  animation: soundwave 1.2s ease-in-out infinite;
+}
